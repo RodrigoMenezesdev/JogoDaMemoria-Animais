@@ -3,37 +3,68 @@ body {
     flex-direction: column;
     align-items: center;
     font-family: sans-serif;
-    background-color: #f4f4f9;
+    background-color: #f4f4f9; /* Fundo do corpo original */
     margin: 0;
     padding: 20px 0;
     text-align: center; 
     min-height: 100vh; 
 }
 
+/* Ajuste no H1 para dar espaço */
 h1 {
-    margin: 15px 0 10px 0; 
+    margin: 10px 0 5px 0; 
 }
+
+/* --- ESTILIZAÇÃO DO CRONÔMETRO (Fundo Azul Claro) --- */
+#cronometro {
+    font-size: 1.5em; 
+    font-weight: bold;
+    color: #333; 
+    margin: 10px 0 5px 0; /* Espaçamento ajustado */
+    padding: 5px 15px;
+    border: 2px solid #ccc; 
+    border-radius: 5px;
+    background-color: #e6f7ff; /* Fundo Azul Claro aplicado APENAS aqui */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* --- NOVO: ESTILIZAÇÃO DO PLACAR E MOVIMENTOS --- */
+.placar {
+    display: flex;
+    justify-content: space-around; /* Distribui o Movimentos e Recorde */
+    width: 100%;
+    max-width: 600px; /* Limita a largura como o restante do conteúdo */
+    margin-bottom: 15px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc; /* Linha divisória sutil */
+}
+
+.placar p {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #555;
+    margin: 0;
+}
+/* --- FIM DA ESTILIZAÇÃO DO PLACAR --- */
 
 /* --- ESTILIZAÇÃO DOS BOTÕES AZUIS --- */
 .controles {
     display: flex;
-    gap: 20px; /* Aumentei o espaçamento entre os botões */
-    /* REMOVIDO: margin-top: auto; - Isso fará com que os botões subam
-    ADICIONADO: Uma margem superior para afastar do tabuleiro, mas não muito. */
+    gap: 20px; 
     margin-top: 30px; 
-    padding-bottom: 20px; /* Mantém um pequeno espaço da borda inferior */
+    padding-bottom: 20px; 
 }
 
 .botao-acao {
-    padding: 15px 35px; /* *** AUMENTADO: Padding para deixar os botões maiores *** */
+    padding: 15px 35px; 
     border: none;
     border-radius: 25px; 
-    font-size: 1.1em; /* *** AUMENTADO: Tamanho da fonte *** */
+    font-size: 1.1em; 
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
     
-    background-color: #007bff; /* Azul primário */
+    background-color: #007bff; 
     color: white; 
     white-space: nowrap; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
@@ -56,8 +87,8 @@ h1 {
     flex-wrap: wrap; 
     justify-content: center; 
     perspective: 1000px;
-    margin-bottom: 20px; /* Margem abaixo do tabuleiro */
-    flex-grow: 1; /* Permite que o tabuleiro ocupe o espaço extra */
+    margin-bottom: 20px; 
+    flex-grow: 1; 
 }
 
 .carta-memoria {
